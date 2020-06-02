@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/textview_lontara_bugis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/comicbold"
+        android:gravity="center_horizontal"
+        android:text="ᨀ"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="@dimen/h6"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <ImageView
+        android:id="@+id/imageview_diaktrik"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/marginSpace"
+        android:src="@drawable/i"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textview_lontara_bugis"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/textview_lontara_bugis_arti"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/comicregular"
+        android:layout_margin="@dimen/marginSpace"
+        android:text="Ka"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="@dimen/body2"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/imageview_diaktrik"
+        app:layout_constraintStart_toStartOf="@+id/imageview_diaktrik"
+        app:layout_constraintTop_toBottomOf="@+id/imageview_diaktrik" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

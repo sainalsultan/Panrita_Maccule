@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_main"
+    android:fillViewport="true"
+    android:fitsSystemWindows="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".features.LontaraActivity">
+
+        <TextView
+            android:id="@+id/textview_menu"
+            style="@style/textviewStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/marginLayout"
+            android:text="@string/lontarabugis"
+            android:textColor="@color/colorAccent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardview_aksara"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/marginLayout"
+            android:layout_marginTop="@dimen/marginContent"
+            android:layout_marginEnd="@dimen/marginLayout"
+            app:cardCornerRadius="@dimen/cardCornerRadius"
+            app:cardElevation="@dimen/cardElevation"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textview_menu">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/textview_info_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/marginLayout"
+                    android:layout_marginTop="@dimen/marginLayout"
+                    android:fontFamily="@font/comicbold"
+                    android:text="@string/aksara_lontara"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/body1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:id="@+id/view"
+                    android:layout_width="50dp"
+                    android:layout_height="5px"
+                    android:layout_below="@+id/textview_info_title"
+                    android:layout_alignStart="@+id/textview_info_title"
+                    android:background="@color/colorYellow"
+                    app:layout_constraintStart_toStartOf="@+id/textview_info_title"
+                    app:layout_constraintTop_toBottomOf="@+id/textview_info_title" />
+
+                <TextView
+                    android:id="@+id/textview_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/marginLayout"
+                    android:layout_marginTop="@dimen/marginSpace"
+                    android:layout_marginEnd="@dimen/marginLayout"
+                    android:fontFamily="@font/comicregular"
+                    android:text="@string/penjelasan_aksara"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/body2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/view" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerview_aksaradasar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/marginLayout"
+                    android:background="@drawable/bg_aksara"
+                    android:padding="3dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textview_info" />
+
+                <TextView
+                    android:id="@+id/textview_info2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/marginLayout"
+                    android:layout_marginTop="@dimen/marginLayout"
+                    android:fontFamily="@font/comicbold"
+                    android:text="@string/tanda_baca"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/body1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/recyclerview_aksaradasar" />
+
+                <View
+                    android:id="@+id/view2"
+                    android:layout_width="50dp"
+                    android:layout_height="5px"
+                    android:background="@color/colorYellow"
+                    app:layout_constraintStart_toStartOf="@+id/textview_info2"
+                    app:layout_constraintTop_toBottomOf="@+id/textview_info2" />
+
+                <View
+                    android:id="@+id/view_tandabaca"
+                    android:layout_width="170dp"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="@dimen/marginLayout"
+                    android:layout_marginTop="@dimen/marginLayout"
+                    android:layout_marginEnd="@dimen/marginLayout"
+                    android:layout_marginBottom="@dimen/marginLayout"
+                    android:background="@drawable/bg_aksara"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textview_info2" />
+
+                <TextView
+                    android:id="@+id/textview_tanda_baca"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/marginContent"
+                    android:fontFamily="@font/comicbold"
+                    android:gravity="center_horizontal"
+                    android:text="᨞"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/h6"
+                    app:layout_constraintEnd_toEndOf="@+id/textview_tanda_baca_arti"
+                    app:layout_constraintStart_toStartOf="@+id/textview_tanda_baca_arti"
+                    app:layout_constraintTop_toTopOf="@+id/view_tandabaca" />
+
+                <TextView
+                    android:id="@+id/textview_tanda_baca_arti"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/comicregular"
+                    android:text="Pallawa"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/body2"
+                    app:layout_constraintEnd_toStartOf="@+id/textview_tanda_baca2_arti"
+                    app:layout_constraintStart_toStartOf="@+id/view_tandabaca"
+                    app:layout_constraintTop_toBottomOf="@+id/textview_tanda_baca" />
+
+                <TextView
+                    android:id="@+id/textview_tanda_baca2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/marginContent"
+                    android:fontFamily="@font/comicbold"
+                    android:gravity="center_horizontal"
+                    android:text="᨟"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/h6"
+                    app:layout_constraintEnd_toEndOf="@+id/textview_tanda_baca2_arti"
+                    app:layout_constraintStart_toStartOf="@+id/textview_tanda_baca2_arti"
+                    app:layout_constraintTop_toTopOf="@+id/view_tandabaca" />
+
+                <TextView
+                    android:id="@+id/textview_tanda_baca2_arti"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/marginLayout"
+                    android:fontFamily="@font/comicregular"
+                    android:text="Akhir bagian"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/body2"
+                    app:layout_constraintEnd_toEndOf="@+id/view_tandabaca"
+                    app:layout_constraintStart_toEndOf="@+id/textview_tanda_baca_arti"
+                    app:layout_constraintTop_toBottomOf="@+id/textview_tanda_baca2" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardview_diaktrik"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/marginLayout"
+            android:layout_marginTop="@dimen/marginSpace"
+            android:layout_marginEnd="@dimen/marginLayout"
+            app:cardCornerRadius="@dimen/cardCornerRadius"
+            app:cardElevation="@dimen/cardElevation"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardview_aksara">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/textview_info_title_diaktrik"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/marginLayout"
+                    android:layout_marginTop="@dimen/marginLayout"
+                    android:fontFamily="@font/comicbold"
+                    android:text="@string/diaktrik"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/body1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:id="@+id/view_diaktrik"
+                    android:layout_width="50dp"
+                    android:layout_height="5px"
+                    android:layout_below="@+id/textview_info_title_diaktrik"
+                    android:layout_alignStart="@+id/textview_info_title_diaktrik"
+                    android:background="@color/colorYellow"
+                    app:layout_constraintStart_toStartOf="@+id/textview_info_title_diaktrik"
+                    app:layout_constraintTop_toBottomOf="@+id/textview_info_title_diaktrik" />
+
+                <TextView
+                    android:id="@+id/textview_info_diaktrik"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/marginLayout"
+                    android:layout_marginTop="@dimen/marginSpace"
+                    android:layout_marginEnd="@dimen/marginLayout"
+                    android:fontFamily="@font/comicregular"
+                    android:text="@string/penjelasan_diaktrik"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/body2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/view_diaktrik" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerview_diaktrik"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/marginLayout"
+                    android:background="@drawable/bg_aksara"
+                    android:padding="3dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textview_info_diaktrik" />
+
+                <TextView
+                    android:id="@+id/textview_info2_diaktrik"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/marginLayout"
+                    android:layout_marginTop="@dimen/marginLayout"
+                    android:fontFamily="@font/comicbold"
+                    android:text="@string/contoh"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/body1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/recyclerview_diaktrik" />
+
+                <View
+                    android:id="@+id/view2_diaktrik"
+                    android:layout_width="50dp"
+                    android:layout_height="5px"
+                    android:background="@color/colorYellow"
+                    app:layout_constraintStart_toStartOf="@+id/textview_info2_diaktrik"
+                    app:layout_constraintTop_toBottomOf="@+id/textview_info2_diaktrik" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerview_contoh"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/marginLayout"
+                    android:background="@drawable/bg_aksara"
+                    android:padding="3dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/view2_diaktrik" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/button_lihat"
+            style="@style/buttonYellowStyle"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="@dimen/marginContent"
+            android:layout_marginBottom="@dimen/marginContent"
+            android:layout_marginStart="@dimen/marginLayout"
+            android:layout_marginEnd="@dimen/marginLayout"
+            android:background="@drawable/ui_button_yellow"
+            android:text="@string/lihat_sumber"
+            android:textColor="@color/colorWhite"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardview_diaktrik"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

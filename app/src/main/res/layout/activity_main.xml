@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_main"
+    android:fillViewport="true"
+    android:fitsSystemWindows="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".features.MainActivity">
+
+        <ImageView
+            android:id="@+id/imageview_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/todo"
+            android:src="@drawable/ic_maccule"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guidelineTop" />
+
+        <Button
+            android:id="@+id/button_kuis"
+            style="@style/buttonStyle"
+            android:layout_marginTop="@dimen/marginXXLarge"
+            android:text="@string/kuis"
+            android:textColor="@color/colorYellow"
+            android:textSize="@dimen/h6"
+            app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+            app:layout_constraintStart_toStartOf="@id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@+id/imageview_logo" />
+
+        <Button
+            android:id="@+id/button_sinonim"
+            style="@style/buttonStyle"
+            android:layout_marginTop="@dimen/marginLayout"
+            android:text="@string/sinonim"
+            android:textColor="@color/colorYellow"
+            android:textSize="@dimen/h6"
+            app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+            app:layout_constraintStart_toStartOf="@id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@+id/button_kuis" />
+
+        <Button
+            android:id="@+id/button_antonim"
+            style="@style/buttonStyle"
+            android:layout_marginTop="@dimen/marginLayout"
+            android:text="@string/antonim"
+            android:textColor="@color/colorYellow"
+            android:textSize="@dimen/h6"
+            app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+            app:layout_constraintStart_toStartOf="@id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@+id/button_sinonim" />
+
+        <Button
+            android:id="@+id/button_lontara"
+            style="@style/buttonStyle"
+            android:layout_marginTop="@dimen/marginLayout"
+            android:text="@string/lontara"
+            android:textColor="@color/colorYellow"
+            android:textSize="@dimen/h6"
+            app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+            app:layout_constraintStart_toStartOf="@id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@+id/button_antonim" />
+
+        <ImageButton
+            android:id="@+id/button_informasi"
+            style="@style/imageButtonStyle"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_marginTop="@dimen/marginXLarge"
+            android:layout_marginBottom="@dimen/marginLarge"
+            android:scaleType="center"
+            android:src="@drawable/ic_informasi"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toStartOf="@id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@+id/button_lontara" />
+
+        <ImageButton
+            android:id="@+id/button_kamus"
+            style="@style/imageButtonStyle"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_marginTop="@dimen/marginXLarge"
+            android:layout_marginBottom="@dimen/marginLarge"
+            android:scaleType="center"
+            android:src="@drawable/ic_kamus"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/button_pertanyaan"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@id/button_informasi"
+            app:layout_constraintTop_toBottomOf="@+id/button_lontara" />
+
+        <ImageButton
+            android:id="@+id/button_pertanyaan"
+            style="@style/imageButtonStyle"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_marginTop="@dimen/marginXLarge"
+            android:layout_marginBottom="@dimen/marginLarge"
+            android:scaleType="center"
+            android:src="@drawable/ic_pertanyaan"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintTop_toBottomOf="@+id/button_lontara" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineTop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.13"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="@dimen/marginLarge" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="@dimen/marginLarge" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

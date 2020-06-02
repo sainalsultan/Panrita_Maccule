@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Panrita Maccule</string>
+    <string name="kuis">Kuis</string>
+    <string name="todo">TODO</string>
+    <string name="sinonim">Sinonim</string>
+    <string name="antonim">Antonim</string>
+    <string name="lontara">Lontara</string>
+    <string name="info">Sebelum kita memulai kuis ayo kita kembali mengingat huruf Lontara Bugis</string>
+    <string name="mulai">Mulai</string>
+    <string name="title">Masih Ingat?</string>
+    <string name="lontarabugis">Lontara Bugis</string>
+    <string name="aksara_lontara">Aksara Dasar</string>
+    <string name="penjelasan_aksara">Aksara dasar (ina’ sure’ ᨕᨗᨊᨔᨘᨑᨛ dalam bahasa Bugis, anrong lontara’ ᨕᨑᨚᨒᨚᨈᨑ dalam bahasa Makassar) dalam aksara Lontara merepresentasikan satu suku kata dengan vokal inheren /a/. Terdapat 23 aksara dasar dalam aksara Lontara, sebagaimana berikut:</string>
+    <string name="penjelasan_diaktrik">Diakritik (ana’ sure’ ᨕᨊᨔᨘᨑᨛ dalam bahasa Bugis, ana’ lontara’ ᨕᨊᨒᨚᨈᨑ dalam bahasa Makassar) adalah tanda yang melekat pada aksara utama untuk mengubah vokal inheren aksara utama yang bersangkutan. Terdapat 5 diakritik dalam aksara Lontara, sebagaimana berikut:</string>
+    <string name="tanda_baca">Tanda Baca</string>
+    <string name="diaktrik">Diaktrik</string>
+    <string name="contoh">Contoh :</string>
+    <string name="lihat_sumber">Lihat Sumber</string>
+    <string name="informasi_app">Panrita maccule merupakan aplikasi karya anak daerah yang berasal dari Sulawesi Selatan tepatnya di kabupaten Bulukumba, panrita maccule sendiri diambil dari kata panrita yang artinya \"Orang Cerdas\" dan ini merupakan ciri khas nama dari daerah Bulukumba yang biasa disebut Panrita Lopi, lalu kata maccule artinya "Bermain". jadi aplikasi ini bisa disebut dengan aplikasi \"Orang Cerdas Bermain\".</string>
+    <string name="copyright">Copyright 2020</string>
+    <string name="kritik_dan_saran">Kritik dan Saran</string>
+    <string name="sample_gmail_com">sample@gmail.com</string>
+    <string name="nama_lengkap">Nama Lengkap</string>
+    <string name="masukkan_nama_lengkap">Masukkan Nama Lengkap</string>
+    <string name="kirim">Kirim</string>
+    <string name="persetujuan">Data yang saya masukkan merupakan data asli, jika saya mengirimkan data palsu dan mengirimkan masukan yang mengandung hinaan atau celaan, maka saya bersedia dikenakan sanksi yang berlaku.</string>
+
+</resources>
