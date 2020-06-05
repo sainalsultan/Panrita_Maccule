@@ -1,6 +1,7 @@
 package co.id.panritamaccule.adapter
 
 import android.content.Intent
+import android.media.MediaPlayer
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,6 +10,7 @@ import co.id.panritamaccule.DaftarSoalActivity
 import co.id.panritamaccule.R
 import co.id.panritamaccule.SoalActivity
 import co.id.panritamaccule.features.LevelActivity
+import co.id.panritamaccule.utils.buttonClickSound
 import kotlinx.android.synthetic.main.item_level.view.*
 
 /**
@@ -38,7 +40,6 @@ class AdapterLevel : RecyclerView.Adapter<RecyclerView.ViewHolder>(){
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         if (holder is ViewHolder){
             holder.itemView.run{
-
                 val marginStart: Int
                 val marginEnd: Int
                 val marginTop: Int
@@ -70,6 +71,7 @@ class AdapterLevel : RecyclerView.Adapter<RecyclerView.ViewHolder>(){
                 textview_level.text = list.get(position)
 
                 setOnClickListener {
+                    context.buttonClickSound()
                     context.startActivity(
                         Intent(context,
                             DaftarSoalActivity::class.java).run {

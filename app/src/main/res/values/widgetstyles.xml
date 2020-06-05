@@ -9,6 +9,13 @@
         <item name="android:fontFamily">@font/comicbold</item>
     </style>
 
+    <style name="buttonAccentStyle" parent="Widget.AppCompat.Button.Borderless">
+        <item name="android:background">@drawable/ui_button_accent</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">@font/comicbold</item>
+    </style>
+
     <style name="buttonYellowStyle" parent="Widget.AppCompat.Button.Borderless">
         <item name="android:padding">10dp</item>
         <item name="android:textAllCaps">false</item>
@@ -37,5 +44,18 @@
         <item name="android:paddingBottom">5dp</item>
         <item name="android:paddingEnd">@dimen/marginContent</item>
         <item name="android:textSize">@dimen/body1</item>
+    </style>
+
+    <style name="ratingKesempatan" parent="Widget.AppCompat.RatingBar">
+        <item name="android:progressDrawable">@drawable/rating_kesempatan</item>
+        <item name="android:maxHeight">28dp</item>
+        <item name="android:minHeight">28dp</item>
+    </style>
+
+    <style name="radioStyle" parent="Widget.AppCompat.CompoundButton.RadioButton">
+        <item name="android:fontFamily">@font/comicregular</item>
+        <item name="android:button">@null</item>
+        <item name="android:textColor">@drawable/text_color_checked</item>
+        <item name="android:background">@drawable/radio_checked</item>
     </style>
 </resources>

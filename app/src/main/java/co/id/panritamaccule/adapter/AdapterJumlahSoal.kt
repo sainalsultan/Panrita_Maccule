@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import co.id.panritamaccule.DaftarSoalActivity
 import co.id.panritamaccule.R
 import co.id.panritamaccule.SoalActivity
+import co.id.panritamaccule.utils.buttonClickSound
 import kotlinx.android.synthetic.main.item_soal.view.*
 
 /**
@@ -47,23 +48,29 @@ class AdapterJumlahSoal : RecyclerView.Adapter<RecyclerView.ViewHolder>(){
                 marginTop = resources.getDimensionPixelSize(R.dimen.marginLayout)
 
                 if (position % 4 == 0){
-//                    Log.e("pos ","$position")
                     marginStart = resources.getDimensionPixelSize(R.dimen.marginLayout)
                 }else{
-                    marginStart = 0
+                    marginStart = resources.getDimensionPixelSize(R.dimen.marginSpace)
+                }
+
+                if (position % 4 == 3){
+                    marginEnd= resources.getDimensionPixelSize(R.dimen.marginLayout)
+                }else{
+                    marginEnd= resources.getDimensionPixelSize(R.dimen.marginSpace)
                 }
 
                 Log.e("pos ","${position}")
 
                 (this.layoutParams as RecyclerView.LayoutParams).also {
                     it.marginStart = marginStart
-                    it.marginEnd = 0
+                    it.marginEnd = marginEnd
                     it.topMargin = marginTop
                     it.bottomMargin = 0
                 }
 
                 textview_level.text = list.get(position)
                 setOnClickListener {
+                    context.buttonClickSound()
                     context.startActivity(
                         Intent(context,
                             SoalActivity::class.java).run {

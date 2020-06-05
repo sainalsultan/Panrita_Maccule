@@ -54,3 +54,8 @@ fun Context.dialog(title : String, info : String){
         show()
     }
 }
+
+fun Context.buttonClickSound(){
+    val buttonSound by lazy { MediaPlayer.create(this, R.raw.buttonclick) }
+    buttonSound.start()
+}

@@ -18,6 +18,8 @@ class DaftarSoalActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_daftar_soal)
 
+        textview_level.text = intent.getStringExtra("level")
+
         val data = mutableListOf<String>()
         for(i in 1..16) {
             data.add("$i")

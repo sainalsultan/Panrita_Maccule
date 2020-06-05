@@ -1,35 +1,206 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg_main"
-    android:fitsSystemWindows="true"
-    tools:context=".SoalActivity">
+    android:fillViewport="true"
+    android:fitsSystemWindows="true">
 
-    <TextView
-        android:id="@+id/textview_menu"
-        style="@style/textviewYellowStyle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/marginLayout"
-        android:text="@string/level"
-        android:textColor="@color/colorYellow"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".SoalActivity">
 
-    <androidx.appcompat.widget.AppCompatRatingBar
-        android:id="@+id/rating_kesempatan"
-        style="@style/Widget.AppCompat.RatingBar.Small"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:numStars="5"
-        android:rating="3"
-        android:stepSize="1"
-        android:layout_marginEnd="@dimen/marginLayout"
-        app:layout_constraintBottom_toBottomOf="@+id/textview_menu"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textview_menu" />
+        <TextView
+            android:id="@+id/textview_level"
+            style="@style/textviewYellowStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/marginLayout"
+            android:text="@string/level"
+            android:textColor="@color/colorYellow"
+            app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+            app:layout_constraintTop_toTopOf="parent" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.appcompat.widget.AppCompatRatingBar
+            android:id="@+id/rating_kesempatan"
+            style="@style/ratingKesempatan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numStars="5"
+            android:progressTint="@color/colorAccent"
+            android:rating="3"
+            android:scaleY="1"
+            android:stepSize="1"
+            app:layout_constraintBottom_toBottomOf="@+id/textview_level"
+            app:layout_constraintEnd_toEndOf="@+id/guidelineEnd"
+            app:layout_constraintTop_toTopOf="@+id/textview_level" />
+
+        <ProgressBar
+            android:id="@+id/progressbar_time"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="0dp"
+            android:layout_height="5dp"
+            android:layout_marginTop="@dimen/marginLayout"
+            android:progressDrawable="@drawable/ui_progress"
+            app:layout_constraintEnd_toEndOf="@+id/guidelineEnd"
+            app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@+id/textview_level" />
+
+        <TextView
+            android:id="@+id/textview_instruksi"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/marginLayout"
+            android:fontFamily="@font/comicbold"
+            android:text="@string/instruksi1"
+            android:textColor="@color/colorYellow"
+            android:textSize="@dimen/h7"
+            app:layout_constraintEnd_toEndOf="@+id/guidelineEnd"
+            app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@+id/progressbar_time" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardview_soal1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/marginContent"
+            app:cardCornerRadius="@dimen/cardCornerRadius"
+            app:cardElevation="@dimen/cardElevation"
+            app:layout_constraintEnd_toEndOf="@+id/guidelineEnd"
+            app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@+id/textview_instruksi">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/textview_nomorsoal"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_marginStart="@dimen/marginSpace"
+                    android:layout_marginTop="@dimen/marginSpace"
+                    android:background="@drawable/circle_border_primary"
+                    android:fontFamily="@font/comicbold"
+                    android:gravity="center|center_vertical"
+                    android:text="1"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/overline"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textview_soal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/marginLayout"
+                    android:layout_marginEnd="@dimen/marginLayout"
+                    android:layout_marginBottom="@dimen/marginContent"
+                    android:fontFamily="@font/comicbold"
+                    android:gravity="center"
+                    android:text="ᨁ"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/h1"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/textview_nomorsoal" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <co.id.panritamaccule.utils.ToggleButtonGroupTableLayout
+            android:id="@+id/radiogroup_jawaban"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/marginLayout"
+            app:layout_constraintEnd_toEndOf="@+id/guidelineEnd"
+            app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@+id/cardview_soal1">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    style="@style/radioStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/marginSpace"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="@string/jawaban_1" />
+
+                <RadioButton
+                    style="@style/radioStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/marginSpace"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="@string/jawaban_1" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    style="@style/radioStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/marginSpace"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="@string/jawaban_1" />
+
+                <RadioButton
+                    style="@style/radioStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/marginSpace"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="@string/jawaban_1" />
+            </TableRow>
+
+        </co.id.panritamaccule.utils.ToggleButtonGroupTableLayout>
+
+        <Button
+            android:id="@+id/button_periksa"
+            style="@style/buttonAccentStyle"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="@dimen/marginContent"
+            android:layout_marginStart="@dimen/marginContent"
+            android:layout_marginEnd="@dimen/marginContent"
+            android:layout_marginBottom="@dimen/marginContent"
+            android:text="@string/periksa"
+            android:textColor="@drawable/text_color_pressed"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/guidelineEnd"
+            app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@+id/radiogroup_jawaban" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="@dimen/marginLayout" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="@dimen/marginLayout" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
