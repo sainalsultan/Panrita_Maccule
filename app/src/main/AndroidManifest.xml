@@ -11,7 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
-        <activity android:name=".PertanyaanActivity"></activity>
+        <activity android:name=".DaftarSoalActivity"></activity>
+        <activity android:name=".SoalActivity" />
+        <activity android:name=".features.PertanyaanActivity" />
         <activity android:name=".features.InformasiActivity" />
         <activity android:name=".features.LontaraActivity" />
         <activity android:name=".features.LevelActivity" />

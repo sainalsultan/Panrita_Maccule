@@ -1,6 +1,7 @@
 package co.id.panritamaccule.adapter
 
 import android.content.Intent
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -8,14 +9,13 @@ import androidx.recyclerview.widget.RecyclerView
 import co.id.panritamaccule.DaftarSoalActivity
 import co.id.panritamaccule.R
 import co.id.panritamaccule.SoalActivity
-import co.id.panritamaccule.features.LevelActivity
-import kotlinx.android.synthetic.main.item_level.view.*
+import kotlinx.android.synthetic.main.item_soal.view.*
 
 /**
- * Created by Sainal Sultan on 5/31/2020.
+ * Created by Sainal Sultan on 6/04/2020.
  * sainalsultan@gmail.com | Hasanah Dev.
  */
-class AdapterLevel : RecyclerView.Adapter<RecyclerView.ViewHolder>(){
+class AdapterJumlahSoal : RecyclerView.Adapter<RecyclerView.ViewHolder>(){
 
     private val list : MutableList<String> = mutableListOf()
 
@@ -26,7 +26,7 @@ class AdapterLevel : RecyclerView.Adapter<RecyclerView.ViewHolder>(){
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
-        LayoutInflater.from(parent.context).inflate(R.layout.item_level,parent,false).also {
+        LayoutInflater.from(parent.context).inflate(R.layout.item_soal,parent,false).also {
             return ViewHolder(it)
         }
     }
@@ -44,36 +44,30 @@ class AdapterLevel : RecyclerView.Adapter<RecyclerView.ViewHolder>(){
                 val marginTop: Int
                 val marginBottom: Int
 
-                marginStart = resources.getDimensionPixelSize(R.dimen.marginLayout)
-                marginEnd = resources.getDimensionPixelSize(R.dimen.marginLayout)
+                marginTop = resources.getDimensionPixelSize(R.dimen.marginLayout)
 
-                if (position == list.size - 1) {
-                    marginBottom = resources.getDimensionPixelSize(R.dimen.marginLayout)
-                } else {
-                    marginBottom = resources.getDimensionPixelSize(R.dimen.marginSpace)
+                if (position % 4 == 0){
+//                    Log.e("pos ","$position")
+                    marginStart = resources.getDimensionPixelSize(R.dimen.marginLayout)
+                }else{
+                    marginStart = 0
                 }
 
-                if (position == 0) {
-                    marginTop = resources.getDimensionPixelSize(R.dimen.marginLayout)
-                    imageview_kunci.visibility = View.GONE
-                } else {
-                    marginTop = 0
-                }
+                Log.e("pos ","${position}")
 
                 (this.layoutParams as RecyclerView.LayoutParams).also {
                     it.marginStart = marginStart
-                    it.marginEnd = marginEnd
+                    it.marginEnd = 0
                     it.topMargin = marginTop
-                    it.bottomMargin = marginBottom
+                    it.bottomMargin = 0
                 }
 
                 textview_level.text = list.get(position)
-
                 setOnClickListener {
                     context.startActivity(
                         Intent(context,
-                            DaftarSoalActivity::class.java).run {
-                            putExtra("level",list.get(position))
+                            SoalActivity::class.java).run {
+                            putExtra("soal",list.get(position))
                         })
                 }
             }

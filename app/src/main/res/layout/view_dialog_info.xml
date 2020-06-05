@@ -50,6 +50,7 @@
             android:layout_below="@+id/textview_info"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="@dimen/marginContent"
+            android:layout_marginBottom="@dimen/marginLayout"
             android:background="@drawable/ui_button_yellow"
             android:text="@string/mulai"
             android:textColor="@color/colorWhite" />
@@ -61,7 +62,6 @@
             android:layout_height="45dp"
             android:layout_below="@+id/button_mulai"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="@dimen/marginLayout"
             android:layout_marginBottom="@dimen/marginLayout"
             android:background="@drawable/ui_button_yellow_border"
             android:text="Lain Kali"

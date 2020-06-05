@@ -1,11 +1,12 @@
 <resources>
     <string name="app_name">Panrita Maccule</string>
     <string name="kuis">Kuis</string>
+    <string name="level">Level </string>
     <string name="todo">TODO</string>
     <string name="sinonim">Sinonim</string>
     <string name="antonim">Antonim</string>
     <string name="lontara">Lontara</string>
-    <string name="info">Sebelum kita memulai kuis ayo kita kembali mengingat huruf Lontara Bugis</string>
+    <string name="info">Ada berapa huruf pada Lontara Bugis? ayo kita ingat kembali teman-teman</string>
     <string name="mulai">Mulai</string>
     <string name="title">Masih Ingat?</string>
     <string name="lontarabugis">Lontara Bugis</string>
@@ -24,5 +25,7 @@
     <string name="masukkan_nama_lengkap">Masukkan Nama Lengkap</string>
     <string name="kirim">Kirim</string>
     <string name="persetujuan">Data yang saya masukkan merupakan data asli, jika saya mengirimkan data palsu dan mengirimkan masukan yang mengandung hinaan atau celaan, maka saya bersedia dikenakan sanksi yang berlaku.</string>
+    <string name="terimakasih">Terima kasih atas kritik dan saran yang diberikan, kami siap untuk mengevaluasi aplikasi ini agar bisa menjadi lebih baik.</string>
+    <string name="soal">Soal</string>
 
 </resources>

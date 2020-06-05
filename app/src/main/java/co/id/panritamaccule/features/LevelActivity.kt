@@ -11,6 +11,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.view.Window
 import android.widget.Button
+import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import co.id.panritamaccule.R
 import co.id.panritamaccule.adapter.AdapterLevel
@@ -52,6 +53,8 @@ class LevelActivity : AppCompatActivity() {
             window!!.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
             setCancelable(false)
             setContentView(R.layout.view_dialog_info)
+            val textviewInfoTitle = findViewById<TextView>(R.id.textview_info_title)
+            val textviewInfo = findViewById<TextView>(R.id.textview_info)
             val buttonMulai = findViewById<Button>(R.id.button_mulai)
             val buttonBatal = findViewById<Button>(R.id.button_batal)
             buttonMulai.setOnClickListener {

@@ -2,6 +2,7 @@
 <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nestedscroll_pertanyaan"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg_main"
@@ -11,7 +12,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".PertanyaanActivity">
+        tools:context=".features.PertanyaanActivity">
 
         <TextView
             android:id="@+id/textview_menu"
@@ -27,14 +28,13 @@
         <androidx.cardview.widget.CardView
             android:id="@+id/cardview_aksara"
             android:layout_width="0dp"
-            android:layout_height="0dp"
+            android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/marginLayout"
             android:layout_marginTop="@dimen/marginContent"
             android:layout_marginBottom="@dimen/marginContent"
             android:layout_marginEnd="@dimen/marginLayout"
             app:cardCornerRadius="@dimen/cardCornerRadius"
             app:cardElevation="@dimen/cardElevation"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textview_menu">
@@ -160,10 +160,10 @@
                     android:gravity="top"
                     android:hint="Ketik disini..."
                     android:inputType="textMultiLine"
-                    android:scrollbars="vertical"
                     android:overScrollMode="always"
-                    android:scrollbarStyle="insideInset"
                     android:padding="10dp"
+                    android:scrollbarStyle="insideInset"
+                    android:scrollbars="vertical"
                     android:textColor="@color/colorPrimary"
                     android:textSize="@dimen/body1"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -177,18 +177,18 @@
                     android:layout_marginStart="@dimen/marginLayout"
                     android:layout_marginTop="@dimen/marginLayout"
                     android:layout_marginEnd="@dimen/marginLayout"
+                    android:buttonTint="@color/colorPrimary"
                     android:fontFamily="@font/comicregular"
                     android:gravity="top"
                     android:text="@string/persetujuan"
                     android:textColor="@color/colorGrey"
                     android:textSize="@dimen/body2"
-                    android:buttonTint="@color/colorPrimary"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/edittext_masukan" />
 
                 <Button
-                    android:id="@+id/button_lihat"
+                    android:id="@+id/button_kirim"
                     style="@style/buttonYellowStyle"
                     android:layout_width="0dp"
                     android:layout_height="45dp"

@@ -1,9 +1,11 @@
-package co.id.panritamaccule
+package co.id.panritamaccule.features
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MotionEvent
 import android.view.View
+import co.id.panritamaccule.R
+import co.id.panritamaccule.utils.dialog
 import kotlinx.android.synthetic.main.activity_pertanyaan.*
 
 class PertanyaanActivity : AppCompatActivity() {
@@ -26,5 +28,10 @@ class PertanyaanActivity : AppCompatActivity() {
              return false
             }
         })
+
+        button_kirim.setOnClickListener {
+            dialog("Data terkirim",getString(R.string.terimakasih))
+        }
+
     }
 }

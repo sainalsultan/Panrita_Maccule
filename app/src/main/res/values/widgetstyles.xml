@@ -28,4 +28,14 @@
         <item name="android:paddingEnd">@dimen/marginContent</item>
         <item name="android:textSize">@dimen/body1</item>
     </style>
+
+    <style name="textviewYellowStyle" parent="Widget.AppCompat.TextView">
+        <item name="android:background">@drawable/bg_textview_yellow</item>
+        <item name="android:fontFamily">@font/comicbold</item>
+        <item name="android:paddingStart">@dimen/marginContent</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:paddingEnd">@dimen/marginContent</item>
+        <item name="android:textSize">@dimen/body1</item>
+    </style>
 </resources>

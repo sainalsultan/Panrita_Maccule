@@ -13,7 +13,8 @@ import kotlinx.android.synthetic.main.activity_splash_screen.*
 
 class SplashScreenActivity : AppCompatActivity() {
 
-    val openingSound by lazy { MediaPlayer.create(this, R.raw.opening) }
+    private val openingSound by lazy { MediaPlayer.create(this, R.raw.opening) }
+    private val backSound by lazy { MediaPlayer.create(this, R.raw.back) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -45,6 +46,7 @@ class SplashScreenActivity : AppCompatActivity() {
             startActivity(Intent(this,
                 MainActivity::class.java))
             finish()
+            backSound.start()
         },3000)
     }
 }

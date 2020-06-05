@@ -5,7 +5,6 @@ import android.media.MediaPlayer
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import co.id.panritamaccule.PertanyaanActivity
 import co.id.panritamaccule.R
 import co.id.panritamaccule.utils.toast
 import kotlinx.android.synthetic.main.activity_main.*
