@@ -112,7 +112,7 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>
 
-        <co.id.panritamaccule.utils.ToggleButtonGroupTableLayout
+        <!--<co.id.panritamaccule.utils.ToggleButtonGroupTableLayout
             android:id="@+id/radiogroup_jawaban"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -121,57 +121,135 @@
             app:layout_constraintStart_toStartOf="@+id/guidelineStart"
             app:layout_constraintTop_toBottomOf="@+id/cardview_soal1">
 
-            <TableRow
+            &lt;!&ndash;<TableRow
+                android:id="@+id/tr1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
                 <RadioButton
+                    android:id="@+id/radiobutton_jawaban1"
                     style="@style/radioStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/marginSpace"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:padding="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
                     android:text="@string/jawaban_1" />
 
                 <RadioButton
+                    android:id="@+id/radiobutton_jawaban2"
                     style="@style/radioStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/marginSpace"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:padding="10dp"
-                    android:text="@string/jawaban_1" />
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:text="2" />
             </TableRow>
 
             <TableRow
+                android:id="@+id/tr2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
                 <RadioButton
+                    android:id="@+id/radiobutton_jawaban3"
                     style="@style/radioStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/marginSpace"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:padding="10dp"
-                    android:text="@string/jawaban_1" />
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:text="3" />
 
                 <RadioButton
+                    android:id="@+id/radiobutton_jawaban4"
                     style="@style/radioStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/marginSpace"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:padding="10dp"
-                    android:text="@string/jawaban_1" />
-            </TableRow>
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:text="4" />
+            </TableRow>&ndash;&gt;
 
-        </co.id.panritamaccule.utils.ToggleButtonGroupTableLayout>
+        </co.id.panritamaccule.utils.ToggleButtonGroupTableLayout>-->
+
+        <!--<RadioGroup
+            android:id="@+id/radiogroup_jawaban"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/marginLayout"
+            app:layout_constraintEnd_toEndOf="@+id/guidelineEnd"
+            app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@+id/cardview_soal1"/>-->
+
+            <!--<RadioButton
+                android:id="@+id/radiobutton_jawaban1"
+                style="@style/radioStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/marginSpace"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="@string/jawaban_1" />
+
+            <RadioButton
+                android:id="@+id/radiobutton_jawaban2"
+                style="@style/radioStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/marginSpace"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="@string/jawaban_1" />
+
+            <RadioButton
+                android:id="@+id/radiobutton_jawaban3"
+                style="@style/radioStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/marginSpace"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="@string/jawaban_1" />
+
+            <RadioButton
+                android:id="@+id/radiobutton_jawaban4"
+                style="@style/radioStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/marginSpace"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="@string/jawaban_1" />-->
+
+        <!--</RadioGroup>-->
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview_jawaban"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/marginLayout"
+            app:layout_constraintEnd_toEndOf="@+id/guidelineEnd"
+            app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@+id/cardview_soal1"/>
 
         <Button
             android:id="@+id/button_periksa"
@@ -187,7 +265,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/guidelineEnd"
             app:layout_constraintStart_toStartOf="@+id/guidelineStart"
-            app:layout_constraintTop_toBottomOf="@+id/radiogroup_jawaban" />
+            app:layout_constraintTop_toBottomOf="@+id/recyclerview_jawaban" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guidelineStart"

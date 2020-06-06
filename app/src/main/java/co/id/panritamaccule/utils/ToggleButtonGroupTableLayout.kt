@@ -4,9 +4,11 @@ import android.content.Context
 import android.util.AttributeSet
 import android.view.View
 import android.view.ViewGroup
+import android.widget.CompoundButton
 import android.widget.RadioButton
 import android.widget.TableLayout
 import android.widget.TableRow
+import androidx.annotation.IdRes
 
 
 /**
@@ -16,6 +18,7 @@ import android.widget.TableRow
 
 
 class ToggleButtonGroupTableLayout : TableLayout, View.OnClickListener {
+
     private var activeRadioButton: RadioButton? = null
 
     constructor(context: Context?) : super(context) {

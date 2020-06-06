@@ -30,5 +30,6 @@
     <string name="instruksi1">Silakan pilih aksara dasar yang sesuai dengan gambar di bawah ini!</string>
     <string name="jawaban_1">Jawaban 1</string>
     <string name="periksa">Periksa</string>
+    <item name="jawaban1" type="id"/>
 
 </resources>
